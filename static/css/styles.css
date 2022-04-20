@@ -1,0 +1,16 @@
+body {
+    margin-top: 20px;
+}
+
+#line {
+    color: blueviolet;
+    width: 15px;
+}
+
+.card-title {
+    margin-bottom: 20px;
+}
+
+.button {
+    border-radius: 12px;
+}
