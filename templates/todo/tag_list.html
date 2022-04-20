@@ -4,7 +4,7 @@
     <h1>
       Tags
       <a style="float: right" href="{% url "todo:tag-create" %}">
-        <button class="btn-primary">Add</button>
+        <button class="btn-primary" style="border-radius: 5px">Add</button>
       </a>
     </h1>
     {% if tag_list %}
@@ -18,16 +18,17 @@
         {% for tag in tag_list %}
           <tr>
             <td>
-              {{ tag.id }}
-            </td>
-            <td>
               {{ tag.name }}
             </td>
             <td>
-              <a href="{% url "todo:tag-update" pk=tag.id %}">UPDATE</a>
+              <a href="{% url "todo:tag-update" pk=tag.id %}">
+                <button style="background: dimgrey; color: white; border-radius: 8px">Update</button>
+              </a>
             </td>
             <td>
-              <a href="{% url "todo:tag-delete" pk=tag.id %}">DELETE</a>
+              <a href="{% url "todo:tag-delete" pk=tag.id %}">
+                <button style="background: dimgrey; color: white; border-radius: 5px">Delete</button>
+              </a>
             </td>
           </tr>
         {% endfor %}
